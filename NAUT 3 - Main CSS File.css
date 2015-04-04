@@ -1,7 +1,7 @@
 	/*
 			Version 3.1
 			Stylesheet by Cryptonaut
-			Last modified: 26 MAR 2015
+			Last modified: 05 APR 2015
 			Details: This is a custom template made by /u/Cryptonaut. 
 			Find out more on /r/Naut.
 
@@ -19,6 +19,7 @@
 							  sizes and margins, more transitions and animations and
 							  much more. See /r/Naut for more
 			V3.1 - Update 9 - Many bugfixes and some changes for easier customization
+			V3.1.1 - Update 10 - Modified by SgtConti for /r/SunetShimmer
 
 
 			-------------------------------------------------------------------------- */
@@ -35,7 +36,7 @@
 			
 			/* General Styles - Links / Buttons / Inputs */
 			a {
-				color: #4F8EF7;
+				color: #d94c5f;
 				transition: color 0.15s ease;
 			}
 
@@ -64,16 +65,15 @@
 					.pretty-form input[type=text]:active, .pretty-form textarea:active, .pretty-form input[type=password]:active, .pretty-form input[type=number]:active,
 					.login-form-side input[type=text]:active, .login-form-side input[type=password]:active {
 						outline: none!important;
-						border-color: #4F8EF7;
+						border-color: #d5394e;
 						color: #4D5763;
 					}
 
 			.btn, button {
 				margin: 4px 16px 4px 0px;
 				padding: 2px 18px;
-				background-color: #516AE8;
+				background-color: #d5394e;
 				border: none;
-				border-radius: 2px;
 				box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.24);
 				color: #fff !important;
 				text-transform: uppercase;
@@ -86,12 +86,12 @@
 
 				.btn:hover, button:hover {
 					box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.34);
-					background-color: #5A72EE;
+					background-color: #d94c5f;
 				}
 
 					.btn:active, button:active {
 						box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
-						background-color: #4059DB;
+						background-color: #dd6071;
 					}
 
 					.btn:focus, button:focus {outline: none;}
@@ -107,10 +107,10 @@
 
 
 				#sr-header-area {
-					background-color: rgba(0,0,0,0.05);
+					background-color: rgba(0,0,0,0.3);
 					border: 0px solid;
 					transition: all 0.15s ease;
-					height: 24px;
+					height: 23px;
 					line-height: 23px;
 				}
 
@@ -163,7 +163,7 @@
 						#sr-header-area .drop-choices.srdrop {
 							background-color: #fff;
 							border: none;
-							box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15)
+							box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.5)
 						}
 
 							#sr-header-area .drop-choices a.choice {
@@ -179,48 +179,25 @@
 
 				#header-img.default-header, #header-img {
 					z-index: 99;
-					width: 0px;
+					width: 227px;
 					padding-left: 48px;
-					height: 48px;
-					background-image: url(%%spritesheet%%);
-					background-position: -208px -48px;
+					height: 96px;
+					background-image: url(%%header-img%%);
+					background-position: -1px -1px;
 					position: relative;
 					top: 0px;
 					margin: 0;
 				}
 
-					#header-img.default-header:hover, #header-img:hover {background-position: -208px -96px;}
 
-
-			 	#header .pagename {
-			 		font-size: 0;
+			 	#header .pagename a {
+			 		background: url(%%pagename-img%%);
+				        width: 300px;
+				        Height: 47px;
+				        position: absolute;
+                                        font-size: 0px;
+            				margin: auto;
 			 	}
-
-			 		#header .pagename a {
-			 			display: inline-block;
-			 			color: #fff;
-			 			font-size: 22px;
-			 			padding: 11px;
-			 			font-weight: bold;
-			 			position: relative;
-			 			top: 3px;
-			 			font-family: arial;
-			 			margin: 0 4px;
-			 			vertical-align: top;
-			 			transition: background-color 0.25s ease;
-			 		}
-
-			 			#header .pagename a:hover {
-			 				text-decoration: none;
-			 				background-color: rgba(0,0,0,0.08);
-			 			}
-
-			 			#header .pagename a:before {
-			 				content: "/r/";
-			 				font-size: 18px;
-			 				font-variant: normal;
-			 				letter-spacing: 1px;
-			 			}
 
 
 				/* Tabmenu (hot/new/top) */
@@ -241,7 +218,6 @@
 							padding: 16px 16px;
 							background-color: transparent;
 							border: 0px;
-							border-radius: 0px;
 							color: rgba(255,255,255,0.6);
 							text-transform: uppercase;
 							font-weight: normal;
@@ -259,7 +235,7 @@
 
 							#header .tabmenu li a:hover {
 								color: rgba(255,255,255,1);
-								background-color: rgba(0,0,0,0.08);
+								background-color: rgba(0,0,0,0.2);
 							}
 
 							#header .tabmenu li.selected a {
@@ -272,7 +248,7 @@
 							}
 
 								#header .tabmenu li.selected a:hover {
-									background-color: rgba(0,0,0,0.08);
+									color: rgba(255,255,255,0.7)
 								}
 
 						.listing-page .tabmenu li:nth-of-type(3), .wiki-page .tabmenu li:nth-of-type(3),	/* Rising */
@@ -290,7 +266,6 @@
 				margin: 200px 16px 0px 0px;
 				padding: 6px 16px;
 				background-color: #fff;
-				border-radius: 2px;
 				box-shadow: 0px 1px 5px rgba(0,0,0,0.16);
 			}
 
@@ -358,7 +333,6 @@
 								bottom: 24px;
 								z-index: 100;
 								background-color: #EA4848;
-								border-radius: 2px;
 								box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
 								color: #fff;
 								width: 300px;
@@ -416,10 +390,10 @@
 						display: block;
 						margin: 10px 0px;
 						padding: 10px 0px;
-						color: #5B92FA;
+						color: #d5394e;
 
 						/* Please do not change or remove this line. */
-						content: "CSS Theme via /r/Naut";
+						content: "CSS Theme via /r/Natu";
 						/* Please do not change or remove this line. */
 
 						text-transform: none;
@@ -434,8 +408,8 @@
 				/* Search */
 				#search {
 					position: absolute;
-					right: 16px;
-					top: 96px;
+					right: 0px;
+					top: 24px;
 					z-index: 1;
 					width: 300px;
 				}
@@ -443,7 +417,6 @@
 					#search input[type=text] {
 						padding: 10px 25px 10px 16px;
 						border: 0px solid;
-						border-radius: 2px;
 						box-shadow: 0px 1px 5px rgba(0,0,0,0.24) !important;
 						transition: all 0.25s ease;
 					}
@@ -453,7 +426,6 @@
 						}
 
 							#search input[type=text]:focus {
-								border-radius: 2px 2px 0px 0px;
 								outline: none;
 							}
 
@@ -498,7 +470,6 @@
 								background-position: -215px -231px;
 								background-repeat: no-repeat;
 								border:none !important;
-								border-radius: 16px;
 								background-color: rgba(0,0,0,0.00);
 								transition: background-color 0.15s ease;
 							}
@@ -514,7 +485,6 @@
 					#search #searchexpando {
 						background-color: #f2f2f2;
 						border: none;
-						border-radius: 0px 0px 2px 2px;
 						margin-top: -5px;
 						padding-top: 10px;
 						padding-left: 0px;
@@ -540,14 +510,13 @@
 					position: absolute;
 					top: 148px;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
-					background-color: #516ae8;
+                                        background-color: #d5394e;
 					background-image: url(%%spritesheet%%) !important;
 					background-position: 268px -214px!important;
 					background-repeat: no-repeat !important;
 					right: 16px;
 					width: 300px;
 					height: 36px;
-					border-radius: 2px;
 					line-height: 36px;
 					border: none;
 					text-align: left;
@@ -557,12 +526,12 @@
 				}	
 
 					.morelink:hover {
-						background-color: #5a72ee;
+						background-color: #d94c5f;
 						box-shadow: 0px 5px 8px rgba(0,0,0,0.48);
 					}
 
 						.morelink:active {
-							background-color: #4059DB;
+							background-color: #dd6071;
 							box-shadow: 0px 8px 12px rgba(0,0,0,0.60);
 						}
 
@@ -583,7 +552,7 @@
 						right: 0px;
 						margin-top: 0px;
 						display: block;
-						background-color: #516AE8;
+						background-color: #d5394e;
 						color: #fff;
 						letter-spacing: 0px;
 						z-index: 100;
@@ -592,7 +561,6 @@
 						transition-delay: 0s;
 						font-weight: normal;
 						line-height: 1.4em;
-						border-radius: 2px 2px 0px 0px;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 						visibility: hidden;
 						pointer-events: none;
@@ -672,7 +640,7 @@
 						}
 
 					.titlebox .tagline a.flairselectbtn {
-						color: #4F8EF7;
+						color: #d5394e;
 					}	
 					.titlebox .tagline a.flairselectbtn:after {content: " flair"}
 					.titlebox .tagline .flair:before {content: "";}
@@ -691,8 +659,7 @@
 					right: -268px;
 					top: -36px;
 					background-image: none;
-					border-radius: 32px;
-					background-color: #51A3E8;
+					background-color: #d5394e;
 					border: 0px solid;
 					box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
 					background-image: url(%%spritesheet%%);
@@ -707,11 +674,11 @@
 						}
 
 					.titlebox .fancy-toggle-button .add {
-						background-color: #516AE8;
+background-color: #d5394e;
 						background-position: -208px -144px;
 					}
 
-						.titlebox .fancy-toggle-button .add:hover {background-color: #5A72EE;}
+						.titlebox .fancy-toggle-button .add:hover {background-color: #d94c5f;}
 
 							.titlebox .fancy-toggle-button .add:active {
 								background-color: #fff;
@@ -726,7 +693,7 @@
 						.fancy-toggle-button .remove:hover {background-color: rgba(0,0,0,0.05);}
 
 							.fancy-toggle-button .remove:active {
-								background-color: #5A72EE;
+								background-color: #d94c5f;
 								background-position: -208px -144px
 							}
 
@@ -740,9 +707,8 @@
 						right: -26px;
 						margin-top: 16px;
 						padding: 12px;
-						background-color: rgba(79, 77, 192, 0);
+						background-color: rgba(213, 57, 78, 0);
 						border: none;
-						border-radius: 2px;
 						color: rgba(255, 255, 255, 0);
 						text-align: center;
 						letter-spacing: 1px;
@@ -759,7 +725,7 @@
 							visibility: visible;
 							margin-top: 40px;
 							color: #fff;
-							background-color: #516AE8;
+							background-color: #d5394e;
 							box-shadow: 0px 1px 5px rgba(0,0,0,0.24);
 						}
 
@@ -802,8 +768,7 @@
 					.side .titlebox .md h3 a {
 						padding: 12px 16px;
 						width: 100%;
-						border-radius: 2px;
-						background-color: #516AE8;
+						background-color: #d5394e;
 						font-family: verdana,arial,sans-serif;
 						transition: all 0.25s ease;
 						color: #fff;
@@ -827,7 +792,6 @@
 						padding: 12px 16px;
 						background-color: #FFF;
 						border: 1px solid #D4D4D4;
-						border-radius: 2px;
 						box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
 						color: #737373;
 						font-weight: bold;
@@ -873,7 +837,6 @@
 						.side #moderation_tools .title .collapse-button {
 							color: #4D5763;
 							vertical-align: middle;
-							border-radius: 1px;
 							border: 1px solid #d8d8d8;
 						}
 
@@ -887,7 +850,7 @@
 
 				/* Ads */
 				#ad_sponsorship, #ad-frame, #ad_main {margin-left: -16px;}
-				#ad_sponsorship {margin-top: -18px;border-radius: 2px 2px 0px 0px;}
+				#ad_sponsorship {margin-top: -18px;}
 
 				/* Recently viewed links */
 				.gadget .midcol {width: 38px;}
@@ -902,7 +865,7 @@
 			}	
 
 				.content:before {
-					height: 166px;
+					height: 131px;
 					top: 0px;
 					position: absolute;
 					width: 100%;
@@ -957,7 +920,6 @@
 								background-image: url(%%spritesheet%%) !important;
 								background-color: transparent;
 								width: 33px;
-								border-radius: 2px;
 								transition: background-color 0.25s ease;
 							}
 
@@ -986,7 +948,6 @@
 										    z-index:100;
 										    content: " ";
 										    background-color:#ff5500;
-										    border-radius: 28px;
 										    animation: upvote 0.35s ease-out forwards;
 										    -webkit-animation: upvote 0.35s ease-out forwards;
 										}
@@ -1014,7 +975,6 @@
 										padding: 12px;
 										background-color: rgba(79, 77, 192, 0.0);
 										border: none;
-										border-radius: 2px;
 										color: rgba(255, 255, 255, 0);
 										content: "For content that does not contribute to any discussion.";
 										text-align: center;
@@ -1027,7 +987,7 @@
 
 										.arrow.down:hover:after {
 											visibility: visible;
-											background-color: rgba(79, 77, 192, 0.9);
+											background-color: rgba(213, 57, 78, 0.9);
 											color: #FFF;
 											margin-left: 48px;
 										}
@@ -1049,7 +1009,7 @@
 						.linkflairlabel {
 							padding: 1px 6px 1px 6px;
 							height: 17px;
-							border-radius: 2px;
+
 							border: 0px solid;
 							color: #fff;
 							font-weight: bold;
@@ -1061,7 +1021,7 @@
 							vertical-align: middle;
 							position: relative;
 							top: -2px;
-							background-color: #4F8EF7;
+							background-color: #d5394e;
 						}
 
 							.linkflair-inspiration .linkflairlabel {
@@ -1072,7 +1032,7 @@
 								.linkflair-inspiration .thumbnail.self {background: url(%%spritesheet%%) -143px -140px;}
 
 							.linkflair-waywo .linkflairlabel {
-								background-color: #516ae8;
+background-color: #d5394e;
 								color: #fff;
 							}
 
@@ -1096,7 +1056,7 @@
 							transition: all 0.15s ease;
 						}
 
-							body .content .sitetable .link .title a:hover {color: #4F8EF7;}
+							body .content .sitetable .link .title a:hover {color: #d5394e;}
 
 							.link .entry {
 								padding: 15px 32px 14px 0px;
@@ -1104,9 +1064,9 @@
 								margin-left: 0;
 							}
 
-							/*Unvisited*/	.thing .title.loggedin.click, .thing .title.click, .thing .title.loggedin, .thing .title {color:#4F8EF7;}
+							/*Unvisited*/	.thing .title.loggedin.click, .thing .title.click, .thing .title.loggedin, .thing .title {color:#d5394e;}
 							/*Visited  */	.content .thing .title:visited, .content .thing.visited .title {color: #7D5D8A;}
-							/*Clicking */	.thing .title.loggedin.click:visited, .thing .title.click:visited {color:#4F8EF7;}
+							/*Clicking */	.thing .title.loggedin.click:visited, .thing .title.click:visited {color:#d94c5f;}
 
 
 
@@ -1123,7 +1083,7 @@
 							}
 
 								.link .domain a:hover {
-									color: #4F8EF7;
+									color: #d5394e;
 									text-decoration: none;
 								}
 
@@ -1135,7 +1095,6 @@
 							margin: 2px 6px 2px 0px !important;
 							width: 16px;
 							height: 16px;
-							border-radius: 2px;
 							background-color: transparent;
 							background-image: url(%%spritesheet%%) !important;
 							border: 1px solid #e9e9e9;
@@ -1145,8 +1104,8 @@
 
 
 							.expando-button:hover {
-								background-color: #4F8EF7;
-								border-color: #4F8EF7;
+								background-color: #d5394e;
+								border-color: #d5394e;
 							}
 
 							.expando-button.selftext.collapsed 					{background-position: -32px -32px;}
@@ -1188,7 +1147,6 @@
 							background-color: transparent;
 							border: 0px solid;
 							border-top: 1px solid #F7F7F7;
-							border-radius: 0px;
 							color: #4D5763;
 						}
 
@@ -1206,7 +1164,7 @@
 
 							.link .entry .tagline:first-letter {text-transform: capitalize;}
 							.link .entry .tagline time {cursor: help;}
-							.link .entry .tagline a:hover {color: #4F8EF7;text-decoration: none;}
+							.link .entry .tagline a:hover {color: #d5394e;text-decoration: none;}
 							.link .entry .tagline a.author {margin-right: inherit;}
 
 							.link .entry .tagline .userattrs {visibility: hidden;}
@@ -1218,7 +1176,6 @@
 								background-color: #f00;
 								color: #fff !important;
 								vertical-align: middle;
-								border-radius: 1px;
 								position: relative;
 								top: -1px;
 								cursor: help;
@@ -1253,20 +1210,19 @@
 								transition: all 0.15s ease;
 							}
 			
-								.link .entry .buttons li a:hover {color: #4F8EF7;text-decoration: none;}
+								.link .entry .buttons li a:hover {color: #d5394e;text-decoration: none;}
 			
 								.nsfw-stamp acronym {
 									padding: 2px 3px;
 									background-color: transparent;
 									border-color: #e82e63 !important;
-									border-radius: 2px;
-									color:#e82e63;
+									color: #b3b3b3;
 									opacity: 100;
 									cursor: help;
 								}
 			
 								.link .entry .buttons li a.comments {
-									color: #4F8EF7;
+									color: #d5394e;
 									font-weight: bold !important;
 									opacity: 100 !important;
 									transition: all 0.25s ease-in-out !important;
@@ -1291,7 +1247,6 @@
 									z-index: 100;
 									box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.24);
 									border: none;
-									border-radius: 2px;
 								}
 
 									.action-form .reason-prompt {
@@ -1322,7 +1277,7 @@
 									/*	.link .entry li .comments:hover .newComments {color: #fff !important;} */
 
 									/* Flair */
-									.link .entry .buttons li a.flairselectbtn {color: #4F8EF7;}
+									.link .entry .buttons li a.flairselectbtn {color: #d5394e;}
 
 									/* RES L+C */
 									.link .entry .buttons li .redditSingleClick {
@@ -1339,7 +1294,6 @@
 						.entry .buttons li.reported-stamp {
 							background-color: transparent;
 							border: 1px solid #EDEEEE!important;
-							border-radius: 20px;
 							color: #4A4F57;
 							line-height: 16px;
 						}
@@ -1348,7 +1302,6 @@
 						a.pretty-button.negative, a.pretty-button.neutral, a.pretty-button.positive {
 							background-image: none;
 							border: 1px solid;
-							border-radius: 20px;
 							box-shadow: inset 0px 0px 0px rgba(0, 0, 0, 0.25);
 							color: #fff;
 							line-height: 15px;
@@ -1378,11 +1331,10 @@
 
 						/* Sticky Post */
 						.thing.stickied {
-							border-radius: 2px 2px 0px 0px;
 						}
 
-							.thing.stickied a.title, .thing.stickied a, .thing.stickied .entry li .comments {color: #65b354!important;}					
-							.thing.stickied .expando-button:hover {background-color: #65b354!important;border-color: #65b354!important;}
+							.thing.stickied a.title, .thing.stickied a, .thing.stickied .entry li .comments {color: #baaf62!important;}					
+							.thing.stickied .expando-button:hover {background-color: #baaf62!important;border-color: #baaf62!important;}
 							.tagline .stickied-tagline {color: #b3b3b3;cursor: help;}
 							.thing.stickied .domain {display: none;}
 
@@ -1415,7 +1367,6 @@
 								margin-bottom: 0px;  
 								margin-right: 316px;  
 								border: none;  
-								border-radius: 2px 2px 0px 0px; 
 							} 
 
 								.organic-listing .help {
@@ -1449,7 +1400,6 @@
 							padding: 32px !important;
 							width: 250px !important;
 							border: none;
-							border-radius: 2px;
 							box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.64);
 						}
 
@@ -1458,7 +1408,7 @@
 							.flairselector h2 {
 								margin-bottom: 4px;
 								background-color: transparent;
-								color: #4F8EF7;
+								color: #d5394e;
 								text-align: left;
 								text-transform: capitalize;
 								font-weight: normal;
@@ -1490,7 +1440,7 @@
 										.flairoptionpane ul li .linkflair a.title {
 											font-size: 18px !important;
 											opacity: 100 !important;
-											color: #4F8EF7 !important;
+											color: #d5394e !important;
 										}
 
 							.flairselector form {
@@ -1509,7 +1459,7 @@
 									.flairselector form .flairselection .linkflair a.title {
 										font-size: 18px !important;
 										opacity: 100 !important;
-										color: #4F8EF7 !important;
+										color: #d5394e !important;
 										cursor: default;
 									}
 			
@@ -1523,7 +1473,7 @@
 										.flairselector form .flairselection .flairremove a {
 											visibility: visible;
 											opacity: 100 !important;
-											color: #4F8EF7 !important;
+											color: #d5394e !important;
 											margin-left: -4px;
 											text-transform: capitalize;
 										}
@@ -1601,7 +1551,7 @@
 							div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
 								background-color: transparent !important;
 								padding-left: 8px !important;
-								border-left: 2px solid #4F8EF7;
+								border-left: 2px solid #d5394e;
 							}
 
 								div.commentarea div.RES-keyNav-activeElement .md {
@@ -1620,7 +1570,6 @@
 						/* RES Tag dialog + RES Tag */
 						.userTagLink.hasTag, #userTaggerPreview {
 							font-size: 11px !important;
-							border-radius: 0px !important;
 							border: 0px solid !important;
 							margin-top: 0px !important;
 							margin-left: 4px !important;
@@ -1632,7 +1581,7 @@
 						}
 
 							.RESDialogSmall > h3 {
-								color: #4F8EF7;
+								color: #d5394e;
 								background-color: #FFF;
 								border-bottom: 1px solid #EDEDED;
 								height: 36px;
@@ -1662,15 +1611,13 @@
 							}
 
 								.toggleButton .toggleOn {
-									border-radius: 0px;
-									border: 1px solid #4F8EF7;
-									background-color: #4F8EF7;
+									border: 1px solid #d5394e;
+									background-color: #d5394e;
 									color: #fff;
 									text-transform: capitalize;
 								}
 
 								.toggleButton .toggleOff {
-									border-radius: 0px;
 									border: 1px solid #D7D9DC;
 									background-color: transparent;
 									text-transform: capitalize;
@@ -1707,16 +1654,14 @@
 							font-size: 12px;
 							pointer-events: none;
 							padding: 10px 16px 10px 16px;
-							background-color: #5A72EE;
+							background-color: #d5394e;
 							overflow: visible;
 							color: #FFF;
 						}
 
 						.top-page .content .menuarea .drop-choices.lightdrop {
-							padding: 10px 16px 10px 104px;
-							margin-left: 16px;
-							margin-top: 1px;
-							border-radius: 2px 2px 0px 0px;
+							padding: 6px 16px 10px 104px;
+							margin-left: 21px;
 							border: none;
 							border-bottom: 1px solid #E0E1E2;
 							width: calc(100% - 348px);
@@ -1724,7 +1669,7 @@
 						}
 
 							.top-page .content .menuarea .drop-choices.lightdrop a.choice {
-								padding: 10px;
+								padding: 5px;
 								color: #4D5763;
 								transition: all 0.25s ease;
 							}
@@ -1733,7 +1678,7 @@
 								.top-page .content .menuarea .drop-choices.lightdrop a.choice:hover {background-color: #F5F8F9;}
 
 								.top-page .content .menuarea .drop-choices.lightdrop a.choice.selected {
-									background-color: #4f8ef7;
+									background-color: #d5394e;
 									color: #fff;
 								}
 
@@ -1745,13 +1690,13 @@
 
 							.guider_content {}
 
-								.guider_content h1 {color: #4F8EF7;}
+								.guider_content h1 {color: #d5394e;}
 
 								.guider_button {
 									font-size: 11px;
 									border: none;
 									background-image: none;
-									background-color: #4F8EF7;
+									background-color: #d5394e;
 									transition: all 0.15s ease;
 								}
 
@@ -1773,10 +1718,9 @@
 						line-height: 26px;
 						border: none;
 						margin-right: 316px;
-						background-color: #516AE8;
+background-color: #d5394e;
 						color: #fff;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
-						border-radius: 2px;
 					}
 
 						.infobar .md {color: #fff;}
@@ -1837,7 +1781,6 @@
 
 				/* Comments Page */
 				.comments-page .link {
-					border-radius: 2px 2px 0px 0px;
 				}
 					.comments-page .link .entry {border-bottom: none;padding-bottom: 15px;}
 
@@ -1875,7 +1818,7 @@
 							color: #b3b3b3;
 						}
 
-							.commentarea .menuarea .dropdown.lightdrop .selected:hover {color: #4F8EF7;}
+							.commentarea .menuarea .dropdown.lightdrop .selected:hover {color: #d5394e;}
 							.commentarea .menuarea .dropdown.lightdrop .selected:after {
 								content: "▼"
 							}
@@ -1893,7 +1836,7 @@
 								}
 
 									.drop-choices a.choice:hover {
-										background-color: #4F8EF7;
+										background-color: #d5394e;
 										color: #fff;
 									}
 
@@ -1902,11 +1845,10 @@
 							font-weight: normal;
 						}
 
-							.commentarea .menuarea .toggle a:hover, .help-hoverable:hover {color: #4F8EF7;}
+							.commentarea .menuarea .toggle a:hover, .help-hoverable:hover {color: #d5394e;}
 
 					.commentarea>.usertext {
 						background-color: #FAFAFA;
-						border-radius: 0px 0px 2px 2px;
 						margin: -58px 0 16px 0;
 						padding: 64px 16px 16px 16px;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
@@ -1930,11 +1872,10 @@
 								width: 500px;
 							}
 
-								.usertext .bottom-area a.reddiquette {color: #4F8EF7;}
+								.usertext .bottom-area a.reddiquette {color: #d5394e;}
 
 					.gold-accent.comment-visits-box {
 						margin: 0px 0px 12px 0px;
-						border-radius: 2px;
 					}
 
 					.commentarea .sitetable {
@@ -1943,7 +1884,6 @@
 					}
 
 						.commentarea .thing {
-							border-radius: 2px;
 							background-color: #fff;
 							box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 							margin: 0 0 8px 0;
@@ -2002,7 +1942,7 @@
 										.comment .expand:hover {
 											color: #fff;
 											text-decoration: none;
-											background-color: #4F8EF7;
+											background-color: #d5394e;
 										}
 
 									.comment .author {
@@ -2012,7 +1952,7 @@
 									}
 
 										.comment .author:hover {
-											color: #4f8ef7;
+											color: #d5394e;
 											text-decoration: none;
 										}
 
@@ -2023,22 +1963,21 @@
 
 										.tagline .submitter {
 											font-weight: bold;
-											color: #4f8ef7;
+											color: #d5394e;
 										}
 
 
 										/* RES Fixes */
 										.res .thing .tagline .author.submitter {
 											padding: 1px 4px;
-											border-radius: 1px;
-											background-color: #4F8EF7 !important;
+											background-color: #d5394e !important;
 											box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 											transition: all 0.15s ease;
 										}
 
 											.res .thing .tagline .author.submitter:hover {
 												box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-												background-color: #4F8EF7 !important;
+												background-color: #d5394e !important;
 											}
 
 									.comment .score {
@@ -2063,7 +2002,7 @@
 										.comment .usertext .md p {margin-top: 0px;}
 
 											.md a {
-												color: #4F8EF7;
+												color: #d5394e;
 											}
 
 												.md a:visited {
@@ -2107,12 +2046,12 @@
 									}
 
 										.comment .flat-list li a:hover {
-											color: #4F8EF7;
+											color: #d5394e;
 											text-decoration: none;
 										}
 
 										.comment .flat-list li a[onclick*="reply"] {
-											color: #4F8EF7;
+											color: #d5394e;
 											font-weight: bold;
 											font-size: 11px;
 										}
@@ -2123,7 +2062,7 @@
 
 
 
-									.deepthread a {color: #4F8EF7;}
+									.deepthread a {color: #d5394e;}
 
 					/* Sidebar stuff */
 					.comments-page .side {margin-top: 312px;}
@@ -2135,7 +2074,6 @@
 							padding: 16px;
 							width: 300px;
 							background-color: #fff;
-							border-radius: 2px;
 							box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 							border: none;
 						}
@@ -2182,7 +2120,7 @@
 
 							.submit-page #newlink.submit.content .tabmenu.formtab .selected a {
 								font-size: 16px;
-								background-color: #516AE8;
+background-color: #d5394e;
 								color: #fff;
 							}
 
@@ -2195,7 +2133,6 @@
 						padding: 16px;
 						width: 524px;
 						background-color: #fff;
-						border-radius: 2px;
 						margin-bottom: 16px;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 					}
@@ -2210,8 +2147,7 @@
 						margin: 0;
 						padding: 16px;
 						color: #fff;
-						background-color: #516AE8;
-						border-radius: 0 0 2px 2px;
+						background-color: #d5394e;
 						border: none;
 						margin-top: -12px;
 						box-shadow:  0px 1px 5px rgba(0, 0, 0, 0.24);
@@ -2226,7 +2162,6 @@
 
 					.content.submit .info-notice {
 						background-color: #fff;
-						border-radius: 2px;
 						padding: 16px;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 						border: none;
@@ -2238,7 +2173,7 @@
 						line-height: 41px;
 						height: 42px;
 						margin-top: 24px;
-						background-color: #516AE8;
+						background-color: #d5394e;
 						border: none;
 						color: #fff;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
@@ -2261,7 +2196,6 @@
 					background: #fff none;
 					padding: 16px;
 					border: none;
-					border-radius: 2px 2px 0px 0px;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.24);
 					position: relative;
 				}
@@ -2280,7 +2214,6 @@
 							font-size: 36px;
 							padding: 0;
 							margin: 0;
-							border-radius: 0;
 							border-bottom: 1px solid #E7E7E7;
 							margin-bottom: 9px;
 						}
@@ -2313,7 +2246,6 @@
 					padding: 16px;
 					margin: 0 316px 0 0;
 					background-color: #F9F9F9;
-					border-radius: 0px 0px 2px 2px;
 				}
 
 					.searchfacets .title {margin: 0;}
@@ -2327,7 +2259,6 @@
 
 
 				.search-page .menuarea {
-					border-radius: 2px 2px 0px 0px;
 					border-bottom: 0px;
 					margin: 16px 316px 0px 0px;
 					padding :16px;
@@ -2353,7 +2284,6 @@
 				.wiki-page .wikititle {
 					background-color: #fff;
 					padding: 9px 16px 10px 16px; 
-					border-radius: 2px;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 					font-size: 16px;
 					font-family: arial, sans-serif;
@@ -2364,7 +2294,6 @@
 				.wiki-page .pageactions {
 					background-color: #fff;
 					margin-left: 16px;
-					border-radius: 2px;
 					padding: 0px 16px;
 					border: none;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
@@ -2373,15 +2302,14 @@
 					.wiki-page .pageactions .wikiaction {
 						margin: 0;
 						background-color: transparent;
-						border-radius: 0px;
 						padding: 10px 16px 11px 16px;
 						color: #B3B3B3;
 					}
 
 						.wiki-page .pageactions .wikiaction-current {
 							padding: 10px 16px 7px 16px;
-							border-bottom: 4px solid #4F8EF7;
-							color: #4F8EF7;
+							border-bottom: 4px solid #d5394e;
+							color: #d5394e;
 						}
 
 							.wiki-page .pageactions .wikiaction:hover, .wiki-page .pageactions .wikiaction-current:hover {background-color: rgba(0,0,0,0.05);}
@@ -2390,7 +2318,6 @@
 					margin: 16px 316px 16px 0px;
 					background-color: #fff;
 					padding: 16px;
-					border-radius: 2px;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 				}
 
@@ -2419,20 +2346,19 @@
 				.linefield {
 					background-color: #fff;
 					color: #B3B3B3;
-					border-radius: 2px;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 					margin: 0 0 8px 0;
 					width: 531px;
 				}
 
 					.linefield .title {
-						color: #4F8EF7;
+						color: #d5394e;
 						text-transform: capitalize;
 					}
 
 						.linefield .title:first-letter, .linefield label:first-letter {text-transform: capitalize;}
 						.usertext .bottom-area a {color: #b3b3b3;}
-						.usertext .bottom-area a:hover {color: #4f8ef7;}
+						.usertext .bottom-area a:hover {color: #d5394e;}
 
 				.pretty-form {padding-top: 24px;}
 				.fancy-settings h1, .create-promotion h1 { color: rgba(255,255,255,.8); /* padding-top: 24px;margin-bottom: -18px; This was breaking stuff */}
@@ -2455,7 +2381,7 @@
 						}
 
 						.tabmenu li.selected a {
-							color: #4F8EF7;
+							color: #d5394e;
 							background-color: transparent;
 							border: none;
 						}
@@ -2470,7 +2396,7 @@
 					}
 
 						.tabpane-content .flairrow a.author {color: #b3b3b3;}
-						.tabpane-content .tagline a {color: #4F8EF7;}
+						.tabpane-content .tagline a {color: #d5394e;}
 
 						.tabpane-content .thing .title {overflow: visible;}
 
@@ -2485,7 +2411,6 @@
 					background-color: #fff;
 					padding: 16px;
 					margin-right: 316px;
-					border-radius: 2px;
 					box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 					margin-bottom: 16px;
 				}
@@ -2505,7 +2430,6 @@
 					#images {
 						padding: 16px;
 						background-color: #fff;
-						border-radius: 2px;
 						box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.16);
 						height: 560px;
 						margin-right: 316px;
@@ -2520,7 +2444,6 @@
 				/* Flairs */
 				.flair {
 					border: none;
-					border-radius: 0px;
 					font-size: 12px;
 					font-family: arial, sans-serif;
 					font-weight: normal;
@@ -2546,7 +2469,7 @@
 
 				/* Bunch of RES (Reddit Enhancement Suite) Fixes */
 				.res .link .tagline a.voteWeight {background-color: transparent !important;}
-				.res .thing .tagline .author.moderator {background-color: #65B354 !important;padding: 1px 4px;border-radius: 1px;}
+				.res .thing .tagline .author.moderator {background-color: #65B354 !important;padding: 1px 4px;}
 
 				.res .srSep {color: rgba(255,255,255,0.45);}
 				.res #RESShortcutsViewport, .res #RESShortcutsEditContainer {margin-right: 312px;}
@@ -2558,7 +2481,6 @@
 
 				.res #header-bottom-right {
 					top: 1px;
-					border-radius: 0px;
 					height: 18px;
 					padding: 0px 8px 0px 0px;
 				}
@@ -2566,7 +2488,6 @@
 					.res #userbarToggle {
 						background-color: transparent;
 						color: rgba(255, 255, 255, 0.45);
-						border-radius: 0px;
 						border: none;
 					}
 
@@ -2632,7 +2553,6 @@
 					color: #4D5763;
 					text-transform: uppercase;
 					text-decoration: none;
-					border-radius: 0px;
 					padding: 4px 6px 4px 0px;
 					margin: 2px 6px 2px -4px;
 					text-align: left;
@@ -2641,13 +2561,12 @@
 
 					.res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
 						background-color: transparent;
-						color: #4F8EF7;
+						color: #d5394e;
 					}
 
 				.res #progressIndicator {
 					width: inherit;
 					margin-right: 316px;
-					border-radius: 0px;
 					border: none;
 					padding: 16px;
 					margin: 16px 316px 16px 0px;
@@ -2662,7 +2581,6 @@
 					}
 
 					.res .NERPageMarker {
-						border-radius: 0px;
 						border: none;
 						background-color: #fff;
 						padding: 16px 0px;
@@ -2697,10 +2615,9 @@
 					}
 
 						#RESMainGearOverlay {
-							background-color: #516ae8;
+background-color: #d5394e;
 							top: 0px !important;
 							height: 26px !important;
-							border-radius: 0px !important;
 						}
 
 					.RESDropdownList {
@@ -2711,7 +2628,7 @@
 					}
 
 						.RESDropdownList li {
-							background-color: #516ae8;
+							background-color: #d5394e;
 							color: #fff;
 							border-color: #4258ca;
 							transition: all 0.15s ease;
@@ -2728,7 +2645,6 @@
 
 							#RESSearchMenuItem {
 								border: 1px solid #4258ca;
-								border-radius: 1px;
 								background-color: #667df0;
 							}
 
@@ -2750,7 +2666,6 @@
 										color: rgba(255,255,255,0.6);
 										border: 1px solid #4258ca;
 										transition: all 0.15s ease;
-										border-radius: 2px;
 									}
 									/* Toggle on */
 									.moduleToggle.enabled .toggleOn, .toggleButton.enabled .toggleOn,
@@ -2760,7 +2675,6 @@
 										font-weight: bolder;
 										border: 1px solid #fff;
 										transition: all 0.15s ease;
-										border-radius: 2px;
 									}
 
 
@@ -2798,7 +2712,6 @@
 			transition: all 0.15s ease;
 			background-color: #FFF;
 			content: "≡";
-			border-radius: 1px;
 			box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
 			position: fixed;
 			padding: 0px 12px;
