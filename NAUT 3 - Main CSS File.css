@@ -37,7 +37,7 @@
 			/* General Styles - Links / Buttons / Inputs */
 			a {
 				color: #d94c5f;
-				transition: color 0.15s ease;
+                                transition: 0.15s;
 			}
 
 			::focus {outline: none !important;}
@@ -197,6 +197,10 @@
 				        position: absolute;
                                         font-size: 0px;
             				margin: auto;
+			 	}
+
+			 	#header .pagename {
+                                        font-size: 0px;
 			 	}
 
 
@@ -795,7 +799,7 @@ background-color: #d5394e;
 						box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.12);
 						color: #737373;
 						font-weight: bold;
-						transition: all 0.15s ease;
+
 						display: block;
 						margin: 1.5em 0em;
 						font-size: 12px;
@@ -860,7 +864,7 @@ background-color: #d5394e;
 
 			/* Body Content - Frontpage */
 			.content {
-				margin: 96px 16px 0px 16px;
+				margin: 131px 16px 0px 16px;
 				padding: 0px;
 			}	
 
@@ -950,46 +954,6 @@ background-color: #d5394e;
 										    background-color:#ff5500;
 										    animation: upvote 0.35s ease-out forwards;
 										    -webkit-animation: upvote 0.35s ease-out forwards;
-										}
-
-								/* downvotes */
-								.arrow.down {
-									height: 20px;
-									background-position: -160px 0px;
-									transition: background-color 0.25s ease;
-								}
-									.arrow.downmod {
-										height: 20px;
-										background-position: -224px 0px;
-									}
-
-
-									/* Hover Message on Downvote */
-									.arrow.down:after {
-										display: block;
-										visibility: hidden;
-										position: absolute;
-										z-index: 1000;
-										margin-top: -6px;
-										margin-left: 32px;
-										padding: 12px;
-										background-color: rgba(79, 77, 192, 0.0);
-										border: none;
-										color: rgba(255, 255, 255, 0);
-										content: "For content that does not contribute to any discussion.";
-										text-align: center;
-										letter-spacing: 1px;
-										font-weight: normal;
-										font-size: 13px;
-										transition: all 0.25s ease;
-										pointer-events: none;
-									}
-
-										.arrow.down:hover:after {
-											visibility: visible;
-											background-color: rgba(213, 57, 78, 0.9);
-											color: #FFF;
-											margin-left: 48px;
 										}
 
 						/* Thumbnails */
@@ -2124,8 +2088,8 @@ background-color: #d5394e;
 								color: #fff;
 							}
 
-								.submit-page #newlink.submit.content .tabmenu.formtab a:hover {background-color: #e7e9f6;}
-								.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover {background-color: #6379ea;}
+								.submit-page #newlink.submit.content .tabmenu.formtab a:hover {background-color: #f6d7db;}
+								.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover {background-color: #bf3346;}
 
 					.submit-page .formtabs-content {border-top: 0px;padding-top: 0;}
 
@@ -2401,7 +2365,7 @@ background-color: #d5394e;
 						.tabpane-content .thing .title {overflow: visible;}
 
 				.fancy-settings .pretty-form {
-					padding-top: 0px;
+					padding-top: 35px;
 				}
 
 
@@ -2599,7 +2563,7 @@ background-color: #d5394e;
 
 						.res #searchexpando .searchexpando-submit {display: none;}
 
-					.res h1.hover.redditname {margin-bottom: 28px;}
+					.res h1.hover.redditname {font-size:0px;}
 					.res .titlebox .fancy-toggle-button .add, .res .fancy-toggle-button .remove {top: -78px;}
 					.res .titlebox .tagline {margin-top: -14px;}
 					.res .titlebox span.subscribers, .res .titlebox .users-online, .res .titlebox .number {top: -32px;}
@@ -2736,40 +2700,6 @@ background-color: #d5394e;
 
 		}
 
-
-
-		/* Experimental fadein CSS */
-		.listing-page .sitetable, .search-page .sitetable, .top-page .menuarea .spacer,
-		.organic-listing {
-			animation-name: fadein;
-			animation-duration: 0.75s;
-			animation-iteration-count: 1;
-
-			-webkit-animation-name: fadein;
-			-webkit-animation-duration: 0.75s;
-			-webkit-animation-iteration-count: 1;
-		}
-
-
-				@-webkit-keyframes fadein {
-				  0%   {opacity:0;transform:translateY(48px);-webkit-transform:translateY(48px);}
-				  100% {opacity:1;transform:translateY(0px);-webkit-transform:translateY(0px);}
-				}
-			
-				@-moz-keyframes fadein {
-				  0%   {opacity:0;transform:translateY(48px);-webkit-transform:translateY(48px);}
-				  100% {opacity:1;transform:translateY(0px);-webkit-transform:translateY(0px);}
-				}
-			
-				@-o-keyframes fadein {
-				  0%   {opacity:0;transform:translateY(48px);-webkit-transform:translateY(48px);}
-				  100% {opacity:1;transform:translateY(0px);-webkit-transform:translateY(0px);}
-				}
-			
-				@keyframes fadein {
-				  0%   {opacity:0;transform:translateY(48px);-webkit-transform:translateY(48px);}
-				  100% {opacity:1;transform:translateY(0px);-webkit-transform:translateY(0px);}
-				}
 
 		/* Experimental pop-in message */
 		.flairselector {
@@ -2909,3 +2839,6 @@ background-color: #d5394e;
 
 
 ==================================================================================================================================*/
+
+/* === Disable downvote ===*/
+.down { display: none; }
