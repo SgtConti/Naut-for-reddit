@@ -5,6 +5,8 @@ Naut is a css theme you can use on reddit.com. It's free to use and any subreddi
 
 ![Naut as used on /r/Google](http://i.imgur.com/nvIg7Vv.jpg)
 
+//Modified by /u/TheSgtConti for /r/SunsetShimmer
+
 
 Installation Instructions
 ===============
