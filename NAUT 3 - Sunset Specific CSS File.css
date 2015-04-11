@@ -5,6 +5,21 @@
 .thing[data-fullname="t3_305nam"] .entry a.title::before { font-size: medium !important; content: "SPOILERer by uotapo "; }
 .thing[data-fullname="t3_30kre7"] .domain { font-size:0 !important; }
 
+				/* Flairs */
+.flair {
+  padding:0;
+  background:url(%%flair-table%%);
+  color:black;
+  border:0;
+  border-radius:0;
+  display:inline-block;
+  min-width:16px;
+  height:16px;
+  text-indent:-9999px;
+  line-height: 240%;
+    
+}
+
     /**************
     A Emoticons
     **************/
@@ -1135,8 +1150,6 @@ a[href^="/domain"] {
   transform: unset !important;
 }
 
-END-PONYSCRIPT-IGNORE {color: red}
-
 a[href|="/rajlie"],a[href|="/rpriceless"],a[href|="/rflutterjerk"],a[href|="/rflutterroll"],a[href|="/rtwipride"],a[href|="/rcelestiamad"],a[href|="/rtwicrazy"],a[href|="/rspikemeh"],a[href|="/rlunateehee"],a[href|="/rlunawait"],a[href|="/rpaperbagderpy"],a[href|="/rpaperbagwizard"],a[href|="/rderpwizard"],a[href|="/rabmeh"],a[href|="/rajhappy"],a[href|="/rhapplejack"],a[href|="/rppfear"],a[href|="/rpinkiefear"],a[href|="/rtwibeam"],a[href|="/rscootaderp"],a[href|="/rdidneyworl"],a[href|="/rDIDNEYWORL"],a[href|="/rraritydaww"],a[href|="/rscootacheer"],a[href|="/rlootascoo"],a[href|="/rpinkieawe"],a[href|="/rppawe"],a[href|="/rareyouawizard"],a[href|="/rajsup"],a[href|="/rajwhatsgood"],a[href|="/rflutterwhoa"],a[href|="/rflutterwoah"],a[href|="/rrdcry"],a[href|="/rsilverspoon"],a[href|="/rsspout"],a[href|="/rohcomeon"],a[href|="/rsbcomeon"],a[href|="/rppcute"],a[href|="/rcutiepie"],a[href|="/rabbored"],a[href|="/rabmerp"],a[href|="/rrarityreally"],a[href|="/rraritypaper"],a[href|="/rraritynews"],a[href|="/rsbbook"],a[href|="/rsweetiebook"],a[href|="/rsbook"],a[href|="/rscootaplease"],a[href|="/rscootappeal"],a[href|="/rscootaplz"],a[href|="/rapplegasp"],a[href|="/rtwiright"],a[href|="/rsatistwied"],a[href|="/rcelestiawut"],a[href|="/rwutlestia"],a[href|="/rgrannysmith"],a[href|="/rgranny"],a[href|="/roldmareyellsatcloud"],a[href|="/rrarishock"],a[href|="/rshiningarmor"],a[href|="/rshiningarmour"],a[href|="/rchrysalis"],a[href|="/rqueenchrysalis"],a[href|="/rchangelingqueen"],a[href|="/rcadence"],a[href|="/rcadance"],a[href|="/rprincesscadance"],a[href|="/rprincesscadence"],a[href|="/rprincessmiamorecadenza"],a[href|="/rapplederp"],
 a[href|="/rswagintosh"],
 a[href|="/rflutterfear"],a[href|="/rppboring"],a[href|="/rrarityyell"],a[href|="/rfluttershy"],a[href|="/rajcower"],a[href|="/rajsly"],a[href|="/reeyup"],a[href|="/rrdsmile"],a[href|="/rfluttersrs"],a[href|="/rraritydress"],a[href|="/rtakealetter"],a[href|="/rrdwut"],a[href|="/rppshrug"],a[href|="/rspikenervous"],a[href|="/rnewrainbowdash"],a[href|="/rnoooo"],a[href|="/rdj"],a[href|="/rthreedog"],a[href|="/rfluttershh"],a[href|="/rflutteryay"],a[href|="/rsquintyjack"],a[href|="/rspikepushy"],a[href|="/rajugh"],a[href|="/rraritywut"],a[href|="/rdumbfabric"],a[href|="/rraritywhy"],a[href|="/rtrixiesmug"],a[href|="/rflutterwink"],a[href|="/rrarityannoyed"],a[href|="/rsoawesome"],a[href|="/rajwut"],a[href|="/rtwisquint"],a[href|="/rraritywhine"],a[href|="/rrdcool"],a[href|="/rabwut"],a[href|="/rmanspike"],a[href|="/rcockatrice"],a[href|="/rfacehoof"],a[href|="/rrarityjudge"],a[href|="/rrarityprimp"],a[href|="/rtwirage"],a[href|="/rppseesyou"],
@@ -1225,4 +1238,5 @@ input[value="t3_xy2aw"] + div.usertext-body .SuperRedditAltTextDisplay_Text {
     content: "NSFW emote!";
 }
 
-a.author[href$="MillennialDan & SgtConti"]:before{content:"Totally "}
+/* Made by: Cryptonaut, MillennialDan, eNzyy, Jpon9, JovialFeline, BrokN9
+Modified by: SgtConti */
