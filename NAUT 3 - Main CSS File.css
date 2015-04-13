@@ -470,20 +470,6 @@
 								.link .entry .tagline .userattrs a.moderator {background-color: #65B354;}
 								
 
-
-							.RESUserTagImage {
-								height: 10px !important;
-								background-image: url(%%spritesheet%%) !important;
-								background-position: -192px -34px !important;
-								opacity: 0.25 !important;
-								margin-left: 2px !important;
-								transition: opacity 0.15s ease;
-								margin-top: 1px !important;
-							}
-
-								.RESUserTagImage:hover {opacity: 1 !important;}
-
-
 						/* Comment / Share / Report */
 						.link .flat-list {margin-top: 3px;}
 
@@ -680,92 +666,6 @@
 						}
 
 							.unvotable-message:first-letter {text-transform: capitalize;}
-
-						/* RES Selection */
-						.res .RES-keyNav-activeElement {
-							outline: 0px dashed #E0E0E0 !important;
-							transition: all 0.35s ease;
-						}
-
-							.res .entry {transition: all 0.15s ease;}
-
-							div.RES-keyNav-activeElement, 
-							div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed {
-								background-color: transparent !important;
-								padding-left: 8px !important;
-								border-left: 2px solid #d5394e;
-							}
-
-								div.commentarea div.RES-keyNav-activeElement .md {
-									background-color: transparent !important;
-								}
-
-									.res .commentarea .thing {
-										padding: 16px 16px 0px 14px !important;
-									}
-
-										.res .commentarea .entry .flat-list {
-											padding-bottom: 16px;
-										}
-
-
-						/* RES Tag dialog + RES Tag */
-						.userTagLink.hasTag, #userTaggerPreview {
-							font-size: 11px !important;
-							border: 0px solid !important;
-							margin-top: 0px !important;
-							margin-left: 4px !important;
-						}
-
-						.RESDialogSmall {
-							border: none;
-							box-shadow: 0px 2px 3px #DDD;
-						}
-
-							.RESDialogSmall > h3 {
-								color: #d5394e;
-								background-color: #FFF;
-								border-bottom: 1px solid #EDEDED;
-								height: 36px;
-								padding-top: 9px;
-							}
-
-							.RESCloseButton {
-								line-height: 19px;
-								height: 22px;
-								width: 22px;
-								transition: all 0.15s ease;
-							}
-
-								.RESCloseButton:hover {
-									border: 1px solid #D7D9DC;
-								}
-
-							#userTaggerToolTip input[type=text], #userTaggerToolTip select {
-								line-height: 22px;
-								padding-left: 4px;
-								border: 1px solid #E5E5E5!important
-							}
-
-							.toggleButton {
-								line-height: 0.8;
-
-							}
-
-								.toggleButton .toggleOn {
-									border: 1px solid #d5394e;
-									background-color: #d5394e;
-									color: #fff;
-									text-transform: capitalize;
-								}
-
-								.toggleButton .toggleOff {
-									border: 1px solid #D7D9DC;
-									background-color: transparent;
-									text-transform: capitalize;
-								}
-
-								#userTaggerToolTip input[type=submit] {bottom: 10px !important;}
 
 					/* Sorting Menu (Top links today/this week/ever) */
 					.top-page .content .menuarea .drop-choices.lightdrop {
@@ -1066,20 +966,6 @@
 											font-weight: bold;
 											color: #d5394e;
 										}
-
-
-										/* RES Fixes */
-										.res .thing .tagline .author.submitter {
-											padding: 1px 4px;
-											background-color: #d5394e !important;
-											box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-											transition: all 0.15s ease;
-										}
-
-											.res .thing .tagline .author.submitter:hover {
-												box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-												background-color: #d5394e !important;
-											}
 
 									.comment .score {
 										font-size: inherit;
@@ -1749,22 +1635,6 @@ media='all' .sidebox .subtitle {color:#000;}
 .side .fancy-toggle-button .remove:active {outline: none;}
 .side .fancy-toggle-button.toggle .option.active {display: inline-block;width: 290px;}
 
-.res .RESshortcutside, .res .RESDashboardToggle {
-    width: 152px;
-    height: 20px;
-    padding: 0;
-    margin: 1px 0 5px;
-    display: inline-block;
-    background: #666;
-    border: none;
-    border-radius: 0;
-    font-weight: normal;
-    line-height: 20px;
-    color: #A0B6CA;
-}
-.res .RESshortcutside {margin-right: 6px;}
-.res .RESshortcutside:hover, .res .RESshortcutside.remove, .res .RESDashboardToggle.remove {background: #1E2636;}
-
 /* SUBSCRIBERS/USERS ONLINE */
 .subscribers {
     background: #d5394e;
@@ -2204,3 +2074,120 @@ media='all' .sidebox .subtitle {color:#000;}
 .side .md h1:nth-of-type(3):active ~ h2:last-of-type + p a, .side .md table:nth-of-type(3):hover ~ h2:last-of-type + p a {display:none;}
 
 .side .md {padding-bottom:10px;}
+
+/* .RES FIXES '/
+
+ 				/* Bunch of RES (Reddit Enhancement Suite) Fixes */
+				.res .link .tagline a.voteWeight {background-color: transparent !important;}
+				.res .thing .tagline .author.moderator {background-color: #65B354 !important;padding: 1px 4px;border-radius: 1px;}
+
+				.res .srSep {color: rgba(255,255,255,0.45);}
+				.res #RESShortcutsViewport, .res #RESShortcutsEditContainer {margin-right: 312px;}
+					.res #RESShortcutsEditContainer, #RESShortcutsSort, #RESShortcutsRight, #RESShortcutsLeft, #RESShortcutsAdd, #RESShortcutsTrash {
+						background-color: transparent!important;
+						color: rgba(255, 255, 255, 0.45)!important;
+						top: 1px !important;
+					}
+
+				.res #header-bottom-right {
+					top: 1px;
+					border-radius: 0px;
+					height: 18px;
+					padding: 0px 8px 0px 0px;
+				}
+
+					.res #userbarToggle {
+						background-color: transparent;
+						color: rgba(255, 255, 255, 0.45);
+						border-radius: 0px;
+						border: none;
+					}
+
+					.res #header-bottom-right .user .userkarma {display: none;}
+					.res #header-bottom-right .user {font-size: 0px;}
+					.res #header-bottom-right .user a {font-size: 11px}
+
+					#RESAccountSwitcherIcon {
+						position: relative;
+						top: -4px;
+					}
+
+					.res #REScommentNavToggle {
+						max-width: 98px;
+						overflow: hidden;
+						max-height: 15px;
+						background-color: #FAFAFA;
+						transition: all 0.35s ease;
+					}
+
+						.res #REScommentNavToggle:hover {
+							max-width: 100%;
+						}
+
+						.res .commentarea>.usertext {
+							margin-top: -74px;
+							padding-top: 76px;
+						}
+
+				.res .content .RESBigEditorPop {
+					background-color: rgba(0, 0, 0, 0);
+					line-height: inherit;
+					font-size: 11px;
+					font-family: verdana,arial,sans-serif;
+					box-shadow: none;
+					font-weight: normal;
+					color: #4D5763;
+					border: none;
+					padding: 0;
+					height: inherit;
+					margin-left: 4px;
+					margin-top: 5px;
+				}
+
+				html.res-commentBoxes .comment {
+					margin-left: 0 !important;
+					margin-right: 0px !important;
+				}
+
+					.res .commentarea .thing {border: none !important;}
+
+
+				.res .titlebox span.subscribers, .res .titlebox .users-online, .res .titlebox .number {
+					top: 0px;
+					left: 0px;
+				}
+
+				.res .RESshortcutside, .res .RESDashboardToggle {
+					border: none;
+					color: #fff;
+					text-transform: uppercase;
+					border-radius: 0px;
+					margin: 2px 6px 6px 0px;
+					text-align: left;
+					width: auto;
+				}
+
+					.res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
+						background-color: transparent;
+						color: #4F8EF7;
+					}
+
+					.res .titlebox .fancy-toggle-button .add, .res .fancy-toggle-button .remove {top: -78px;}
+					.res .titlebox span.subscribers, .res .titlebox .users-online, .res .titlebox .number {top: -32px;}
+
+					.res .commentarea .panestack-title {margin-top: 0px;padding-top: 12px;}
+
+					/* Gear dropdown */
+					.gearIcon {
+						background: url(%%spritesheet%%) -0px -0px !important;
+						position: relative;
+						top: 0px;
+						transition: all 0.25s ease;
+					}
+
+						#RESMainGearOverlay {
+							background-color: #516ae8;
+							top: 0px !important;
+							height: 26px !important;
+							border-radius: 0px !important;
+						}
