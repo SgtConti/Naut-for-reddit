@@ -183,7 +183,6 @@
 				#header-img.default-header, #header-img {
 					width: 227px;
 					height: 96px;
-					background-image: url(%%header-img%%);
 					background-position: -1px -1px;
 					margin: 0;
 				}
@@ -1367,6 +1366,7 @@ background-color: #d5394e;
 						background-repeat: no-repeat !important;
 						background-color: transparent;
 						transition: all 0.25s ease;
+                                                top: 0px;
 					}
 
 
@@ -1731,16 +1731,9 @@ media='all' .sidebox .subtitle {color:#000;}
     text-align: left;*/
 }
 
-.side .usertext-body .md ol a[href$='#notice'] {
-    -webkit-animation: pulsate 1s ease-out infinite;
-    -moz-animation: pulsate 1s ease-out infinite;
-    animation: pulsate 1s ease-out infinite;
-}
-
 .side .usertext-body .md ol a[href$='#notice']:visited,
 .side .usertext-body .md ol a[href$='#notice']:hover {
     -webkit-animation: none;
-    -moz-animation: none;
     animation: none;
 }
 
@@ -1769,24 +1762,6 @@ media='all' .sidebox .subtitle {color:#000;}
     background-color: #101828;
     content: "DISCUSSION";
     color: #a9bbab;
-}
-
-@-webkit-keyframes pulsate {
-    0% { opacity: 0.7;}
-    50% {opacity: 1.0;}
-    100% { opacity: 0.7;}
-}
-
-@-moz-keyframes pulsate {
-    0% { opacity: 0.7;}
-    50% {opacity: 1.0;}
-    100% { opacity: 0.7;}
-}
-
-@keyframes pulsate {
-    0% { opacity: 0.7;}
-    50% {opacity: 1.0;}
-    100% { opacity: 0.7;}
 }
 
 /* HEADINGS */
@@ -2158,19 +2133,12 @@ media='all' .sidebox .subtitle {color:#000;}
 				}
 
 				.res .RESshortcutside, .res .RESDashboardToggle {
-					border: none;
-					color: #fff;
 					text-transform: uppercase;
 					border-radius: 0px;
 					margin: 2px 6px 6px 0px;
 					text-align: left;
 					width: auto;
 				}
-
-					.res .RESshortcutside:hover, .res .RESDashboardToggle:hover {
-						background-color: transparent;
-						color: #4F8EF7;
-					}
 
 					.res .titlebox .fancy-toggle-button .add, .res .fancy-toggle-button .remove {top: -78px;}
 					.res .titlebox span.subscribers, .res .titlebox .users-online, .res .titlebox .number {top: -32px;}
