@@ -204,13 +204,13 @@
 				/* Tabmenu (hot/new/top) */
 				#header-bottom-left {
 					position: absolute;
-					top: 36px;
+					top: 35px;
 					left: 16px;
 				}
 
 					#header .tabmenu {
 						border: none;
-						margin: 1px;
+						margin: 3px;
 					}
 
 						#header .tabmenu li a {
